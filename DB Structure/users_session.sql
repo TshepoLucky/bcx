@@ -22,6 +22,8 @@ SET time_zone = "+00:00";
 -- Database: `d2rks1d3r`
 --
 
+use `d2rks1d3r`;
+
 -- --------------------------------------------------------
 
 --
@@ -31,7 +33,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `users_session` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `hash` varchar(255) NOT NULL
+  `hash` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -41,8 +44,8 @@ CREATE TABLE `users_session` (
 --
 -- Indexes for table `users_session`
 --
-ALTER TABLE `users_session`
-  ADD PRIMARY KEY (`id`);
+-- ALTER TABLE `users_session`
+--   ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -51,10 +54,12 @@ ALTER TABLE `users_session`
 --
 -- AUTO_INCREMENT for table `users_session`
 --
-ALTER TABLE `users_session`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
+ ALTER TABLE `users_session`
+   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+COMMIT;
