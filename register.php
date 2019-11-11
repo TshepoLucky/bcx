@@ -1,5 +1,4 @@
 <?php
-ERROR_REPORTING(0);
 require_once 'core/init.php';
 $user = new User();
 
